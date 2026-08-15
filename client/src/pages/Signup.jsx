@@ -33,7 +33,8 @@ const Signup = () => {
       <h2>Sign Up</h2>
       {error && <p style={{ color: "red" }}>{error}</p>}
       <form onSubmit={handleSubmit}>
-        <input
+        <input      
+          className="w-full border border-border rounded-lg px-4 py-2 mb-3 outline-none focus:border-navy transition"
           type="text"
           name="name"
           placeholder="Name"
@@ -42,6 +43,7 @@ const Signup = () => {
           required
         />
         <input
+          className="w-full border border-border rounded-lg px-4 py-2 mb-3 outline-none focus:border-navy transition"
           type="email"
           name="email"
           placeholder="Email"
@@ -50,6 +52,7 @@ const Signup = () => {
           required
         />
         <input
+          className="w-full border border-border rounded-lg px-4 py-2 mb-3 outline-none focus:border-navy transition"
           type="password"
           name="password"
           placeholder="Password"
@@ -58,13 +61,17 @@ const Signup = () => {
           required
         />
         <input
+          className="w-full border border-border rounded-lg px-4 py-2 mb-3 outline-none focus:border-navy transition"
           type="tel"
           name="phone"
           placeholder="Phone"
           value={formData.phone}
           onChange={handleChange}
         />
-        <button type="submit">Sign Up</button>
+        <button
+        type="submit"
+        className="w-full bg-amber text-navy font-semibold py-2 rounded-lg hover:bg-amber/90 transition" 
+        >Sign Up</button>
       </form>
       <p>
         Already have an account? <Link to="/login">Login</Link>
